@@ -1,71 +1,111 @@
-# auto-date-file README
+# Auto-Date-File
 
-This is the README for your extension "auto-date-file". After writing up a brief description, we recommend including the following sections.
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/auto-date-file?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-MeetRathod0-181717?logo=github)](https://github.com/MeetRathod0)
+[![License](https://img.shields.io/github/license/MeetRathod0/auto-date-file)](https://github.com/MeetRathod0/auto-date-file/blob/main/LICENSE)
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+**Created by [Meet Rathod](https://github.com/MeetRathod0)**
 
 ---
 
-## Following extension guidelines
+## 📌 About
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+**Auto-Date-File** is a Visual Studio Code extension that automatically creates a dated file when you open a workspace. It also lets you generate additional files manually using a simple shortcut. Ideal for note-taking, journaling, logging, or daily task tracking.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## ✨ Features
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+* 📁 Automatically creates a file once per day on workspace open.
+* 🧠 File naming format: `DD-MM-YYYY-1.<extension>`, `DD-MM-YYYY-2.<extension>`, etc.
+* 🔧 Supports per-workspace configuration with different file types.
+* ⌨️ Create additional files with `Ctrl+D`.
+* 💼 Lightweight and simple to use.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## ⚙️ Extension Settings 
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+Add your workspace configurations using the setting key:
+`autoDateFile.workspaceSettings`
 
-**Enjoy!**
+```json
+"autoDateFile.workspaceSettings": [
+  "my-space:txt",
+  "myworkspace:md",
+  "project-reports:log"
+]
+```
+
+### Format
+
+```
+<workspace-folder-name>:<file-extension>
+```
+
+Each workspace supports only **one** file extension.
+
+---
+
+## 📁 File Creation Rules
+
+### On Workspace Open
+
+When you open a configured workspace in VS Code for the **first time in a day**, the extension creates:
+
+```
+DD-MM-YYYY-1.<extension>
+```
+
+Example:
+
+```
+27-03-2025-1.md
+```
+
+### On Manual Trigger
+
+Press `Ctrl+D` to create additional dated files with incrementing numbers:
+
+```
+27-03-2025-2.md
+27-03-2025-3.md
+...
+```
+
+---
+
+## 🧪 Example
+
+If your settings include:
+
+```json
+"autoDateFile.workspaceSettings": [
+  "notes:md"
+]
+```
+
+Opening the `notes` folder will create:
+
+* `27-03-2025-1.md` (on open)
+* Pressing `Ctrl+D` will add:
+
+  * `27-03-2025-2.md`
+  * `27-03-2025-3.md`
+
+---
+
+## 👤 Author
+
+Made with ❤️ by [**Meet Rathod**](https://github.com/MeetRathod0)
+
+---
+
+## 📬 Feedback & Contributions
+
+Found a bug? Have a feature idea?
+Feel free to open an issue or pull request at:
+👉 [github.com/MeetRathod0/auto-date-file](https://github.com/MeetRathod0/auto-date-file)
+
+---
+
