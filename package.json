@@ -1,10 +1,16 @@
 {
   "name": "auto-date-file",
   "displayName": "Auto-Date-File",
-  "description": "",
+  "description": "Automatically creates a dated file when you open a workspace in VS Code. Supports per-workspace configuration and sequential file generation with Ctrl+D.",
+  "publisher":"MeetRathod",
   "version": "0.0.1",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.100.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeetRathod0/auto-date-file.git"
   },
   "categories": [
     "Other"
