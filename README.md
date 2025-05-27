@@ -1,8 +1,7 @@
 # Auto-Date-File
 
-[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/Auto-Date-File?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-MeetRathod0-181717?logo=github)](https://github.com/MeetRathod0)
-[![License](https://img.shields.io/github/license/MeetRathod0/auto-date-file)](https://github.com/MeetRathod0/auto-date-file/blob/main/LICENSE)
+
 
 **Created by [Meet Rathod](https://github.com/MeetRathod0)**
 
